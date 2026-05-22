@@ -1,31 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   ShieldAlert, 
-  User, 
   Users, 
   Heart, 
   Award, 
   Brain, 
-  ChevronRight, 
   Plus, 
   Check, 
   X, 
   Undo, 
   Flame, 
   Activity, 
-  Compass, 
   Droplets,
   CloudSun,
   Fingerprint,
-  RotateCcw,
   Settings,
-  AlertTriangle,
-  FileCheck,
   Send,
-  Sparkles,
   RefreshCw,
-  PlusCircle,
-  HelpCircle,
   Info,
   Sliders,
   Calendar,
@@ -1319,7 +1310,15 @@ export default function App() {
               </div>
 
               {/* Suggested helper pill prompts */}
-              <div className="flex gap-2 py-3 overflow-x-auto selection:bg-transparent">
+              <div className="flex gap-2 py-3 overflow-x-auto selection:bg-transparent items-center">
+                <button
+                  onClick={clearChatHistory}
+                  title="Clear clinical chat history"
+                  className="shrink-0 bg-accentRed/10 border border-accentRed/35 hover:bg-accentRed hover:text-white text-accentRed transition-all text-[11px] px-3.5 py-1.5 rounded-xl font-bold flex items-center gap-1.5 font-bold"
+                >
+                  <Trash2 className="w-3.5 h-3.5" />
+                  Clear History
+                </button>
                 {[
                   "Is Metformin safe with grapefruit juice?",
                   "Review warning interactions on Lisinopril",
@@ -1599,7 +1598,7 @@ export default function App() {
               </div>
 
               <button
-                onClick={() => setShowEditProfileDialog(false)}
+                onClick={() => handleSaveProfile(profile)}
                 className="w-full py-3.5 bg-cyanPrimary hover:bg-cyanNeon text-blueDarkBG font-extrabold text-xs rounded-xl transition-all shadow-[0_4px_12px_rgba(0,240,255,0.15)] mt-4"
               >
                 Save Secure profile Information
