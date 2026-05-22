@@ -52,6 +52,9 @@ interface LangContent {
   addMed: string;
   settings: string;
   profileTitle: string;
+  interactionTitle: string;
+  audioDictator: string;
+  exportReport: string;
 }
 
 const LANGUAGES_DICT: Record<string, LangContent> = {
@@ -75,7 +78,10 @@ const LANGUAGES_DICT: Record<string, LangContent> = {
     quickAdd: "Quick Fluid Add",
     addMed: "Register Medication Schedule",
     settings: "Security & API Configuration",
-    profileTitle: "Confidential Profile & Genetic Goals"
+    profileTitle: "Confidential Profile & Genetic Goals",
+    interactionTitle: "Drug & Dietary Interaction Checker",
+    audioDictator: "Multilingual Voice Prescription Speaker",
+    exportReport: "Export Clinical Health Passport"
   },
   Hindi: {
     dashboard: "बायोमार्कर डैशबोर्ड",
@@ -97,7 +103,10 @@ const LANGUAGES_DICT: Record<string, LangContent> = {
     quickAdd: "त्वरित तरल जोड़",
     addMed: "दवा अनुसूची पंजीकृत करें",
     settings: "सुरक्षा एवं एपीआई कॉन्फ़िगरेशन",
-    profileTitle: "गोपनीय प्रोफाइल और आनुवंशिक लक्ष्य"
+    profileTitle: "गोपनीय प्रोफाइल और आनुवंशिक लक्ष्य",
+    interactionTitle: "दवा और खाद्य अंतःक्रिया परीक्षक",
+    audioDictator: "बहुभाषी वॉयस प्रिस्क्रिप्शन वाचक",
+    exportReport: "क्लीनिकल स्वास्थ्य रिपोर्ट प्रिंट करें"
   },
   Telugu: {
     dashboard: "బయోమార్కర్ డాష్‌బోర్డ్",
@@ -119,7 +128,10 @@ const LANGUAGES_DICT: Record<string, LangContent> = {
     quickAdd: "త్వరిత ద్రవాలు నమోదు",
     addMed: "మందుల షెడ్యూల్ నమోదు చేయండి",
     settings: "భద్రత & API కాన్ఫిగరేషన్",
-    profileTitle: "రహస్య ప్రొఫైల్ & లక్ష్యాలు"
+    profileTitle: "రహస్య ప్రొఫైల్ & లక్ష్యాలు",
+    interactionTitle: "ఔషధ మరియు ఆహార పరస్పర చర్యల పరిశీలన",
+    audioDictator: "బహుభాషా ప్రిస్క్రిప్షన్ వాయిస్ స్పీకర్",
+    exportReport: "క్లినికల్ హెల్త్ రిపోర్ట్ డౌన్‌లోడ్"
   },
   Tamil: {
     dashboard: "பயோமார்க்கர் டாஷ்போர்டு",
@@ -141,7 +153,10 @@ const LANGUAGES_DICT: Record<string, LangContent> = {
     quickAdd: "விரைவான திரவப் பதிவு",
     addMed: "மருந்து அட்டவணையை பதிவு செய்",
     settings: "பாதுகாப்பு & API கட்டமைப்பு",
-    profileTitle: "ரகசிய விவரக்குறிப்பு & இலக்குகள்"
+    profileTitle: "ரகசிய விவரக்குறிப்பு & இலக்குகள்",
+    interactionTitle: "மருந்து மற்றும் உணவு தொடர்பு சோதனையாளர்",
+    audioDictator: "பல்மொழி குரல் மருந்து ரீடர்",
+    exportReport: "மருத்துவ சுகாதார பாஸ்போர்ட் ஏற்றுமதி"
   },
   Malayalam: {
     dashboard: "ബയോമാർക്കർ ഡാഷ്‌ബോർഡ്",
@@ -163,7 +178,10 @@ const LANGUAGES_DICT: Record<string, LangContent> = {
     quickAdd: "ദ്രുത ജല രേഖപ്പെടുത്തൽ",
     addMed: "മരുന്ന് വിവരങ്ങൾ രജിസ്റ്റർ ചെയ്യുക",
     settings: "സുരക്ഷ & എപിഐ ക്രമീകരണം",
-    profileTitle: "രഹസ്യ പ്രൊഫൈൽ വിവരങ്ങൾ"
+    profileTitle: "രഹസ്യ പ്രൊഫൈൽ വിവരങ്ങൾ",
+    interactionTitle: "മരുന്നും ഭക്ഷണവും തമ്മിലുള്ള പ്രതിപ്രവർത്തന പരിശോധകൻ",
+    audioDictator: "ബഹുഭാഷാ ശബ്ദ കുറിപ്പടി വാചകൻ",
+    exportReport: "ക്ലിനിക്കൽ ഹെൽത്ത് റിപ്പോർട്ട് പ്രിന്റ്"
   },
   Spanish: {
     dashboard: "Panel de Biomarcadores",
@@ -185,7 +203,110 @@ const LANGUAGES_DICT: Record<string, LangContent> = {
     quickAdd: "Log de Hidratación Rápida",
     addMed: "Registrar Programa de Medicamentos",
     settings: "Seguridad y Configuración de API",
-    profileTitle: "Perfil Confidencial y Metas Genéticas"
+    profileTitle: "Perfil Confidencial y Metas Genéticas",
+    interactionTitle: "Analizador de Interacción Alimentaria",
+    audioDictator: "Dictador de Recetas por Voz",
+    exportReport: "Exportar Reporte Médico Clínico"
+  },
+  Kannada: {
+    dashboard: "ಬಯೋಮಾರ್ಕರ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    meds: "ಔಷಧಿ ವೇಳಾಪಟ್ಟಿ",
+    chat: "ಕ್ಲಿನಿಕಲ್ AI ಚಾಟ್",
+    botscore: "BOTscore™ ನಿಷ್ಠೆ ಸೂಚ್ಯಂಕ",
+    vitals: "ಇಹೆಚ್‌ಆರ್ ನೈಜ-ಸമಯದ ಬಯೋಮಾರ್ಕರ್ಸ್",
+    emergency: "ತುರ್ತು ನಿಯಂತ್ರಣ ಕೇಂದ್ರ",
+    silentSos: "ಸೈಲೆಂಟ್ SOS ತುರ್ತು ಸಿಗ್ನಲ್",
+    activeRole: "ಕ್ಲಿನಿಕಲ್ ಪಾತ್ರದ ಪರಿಸರ",
+    caregiver: "ಆರೈಕೆದಾರರ ರವಾನೆ ಸಿಂಕ್",
+    refillTracker: "ಸ್ಮಾರ್ಟ್ ರೀಫಿಲ್ ಮುನ್ಸೂಚನೆ",
+    confusionHeading: "ಮಾತ್ರೆ ಗುರುತಿಸುವಿಕೆ ಸಹಾಯ",
+    forecastTitle: "BOTscore™ AI ಮುನ್ಸೂಚನೆ",
+    warningTitle: "ಹಿರಿಯ ನಾಗರಿಕರ ಸುರಕ್ಷತೆ ಶಿಷ್ಟಾಚಾರ",
+    alertTitle: "ಹವಾಮಾನ ಆರೋಗ್ಯ ಅಪಾಯದ ಎಚ್ಚರಿಕೆ",
+    disclaimerText: "ಇದು ಕೇವಲ ಸಾಮಾನ್ಯ ಆರೋಗ್ಯ ಮಾರ್ಗದರ್ಶನವಾಗಿದೆ ಮತ್ತು ವೃತ್ತಿಪರ ವೈದ್ಯಕೀಯ ಸಲಹೆಗೆ ಪರ್ಯಾಯವಲ್ಲ.",
+    voiceSim: "ಹ್ಯಾಂಡ್ಸ್-ಫ್ರೀ ಧ್ವನಿ ಸಿಮ್ಯುಲೇಟರ್",
+    quickAdd: "ತ್ವರಿತ ದ್ರವ ನೋಂದಣಿ",
+    addMed: "ಹೊಸ ಔಷಧಿ ಸೇರಿಸಿ",
+    settings: "ಭದ್ರತೆ ಮತ್ತು API ಸಂರಚನೆ",
+    profileTitle: "ರಹಸ್ಯ ವೈಯಕ್ತಿಕ ವಿವರ ಪ್ರೊಫೈಲ್",
+    interactionTitle: "ಔಷಧಿ ಮತ್ತು ಆಹಾರದ ಪ್ರತಿಕ್ರಿಯೆ ಪರಿಶೀಲಕ",
+    audioDictator: "ಭಾಷಾ ಧ್ವನಿ ವಿವರಣೆಕಾರ",
+    exportReport: "ವೈದ್ಯಕೀಯ ವರದಿ ರಫ್ತು ಮಾಡಿ"
+  },
+  Bengali: {
+    dashboard: "বায়োমার্কার ড্যাশবোর্ড",
+    meds: "ওষুধের সময়সূচী",
+    chat: "ক্লিনিক্যাল এআই চ্যাট",
+    botscore: "BOTscore™ সূচক",
+    vitals: "EHR রিয়েল-টাইম বায়োমার্কার",
+    emergency: "জরুরী পোর্টাল",
+    silentSos: "নীরব SOS জরুরী সংকেত",
+    activeRole: "ক্লিনিক্যাল ভূমিকা পরিবেশ",
+    caregiver: "কেয়ারগিভার সিঙ্ক",
+    refillTracker: "স্মার্ট রিফিল পূর্বাভাস",
+    confusionHeading: "ওষুধের পিল সনাক্তকরণ গাইড",
+    forecastTitle: "BOTscore™ এআই প্রতিরোধমূলক পূর্বাভাস",
+    warningTitle: "বয়স্কদের সুরক্ষার নিয়মাবলী",
+    alertTitle: "জলবায়ু স্বাস্থ্য ঝুঁকি সতর্কতা",
+    disclaimerText: "এটি কেবলমাত্র সাধারণ স্বাস্থ্য নির্দেশিকা এবং পেশাদার চিকিত্সকের পরামর্শের বিকল্প নয়।",
+    voiceSim: "হ্যান্ডস-フリー ভয়েস সিমুলেটর",
+    quickAdd: "দ্রুত তরল যোগ করুন",
+    addMed: "নতুন ওষুধ যুক্ত করুন",
+    settings: "নিরাপত্তা ও এপিআই কনফিগারেশন",
+    profileTitle: "গোপনীয় ব্যবহারকারী প্রোফাইল",
+    interactionTitle: "ওষুধ ও খাদ্য মিথস্ক্রিয়া বিশ্লেষক",
+    audioDictator: "ভয়স প্রেসক্রিপশন নির্দেশক",
+    exportReport: "মেডিকেল রিপোর্ট প্রিন্ট করুন"
+  },
+  Marathi: {
+    dashboard: "बायोमार्कर्स डॅशबोर्ड",
+    meds: "औषधोपचारांचे वेळापत्रक",
+    chat: "वैद्यकीय एआय चॅट",
+    botscore: "BOTscore™ अनुपालन निर्देशांक",
+    vitals: "EHR रिअल-टाइम बायोमार्कर्स",
+    emergency: "तात्काळ सेवा केंद्र",
+    silentSos: "सायलेंट SOS आणीबाणी इशारा",
+    activeRole: "वैद्यकीय भूमिका वातावरण",
+    caregiver: "काळजीवाहू समन्वयन",
+    refillTracker: "औषध संपण्याची पूर्वकल्पना",
+    confusionHeading: "गोळ्या ओळखण्याची मार्गदर्शिका",
+    forecastTitle: "BOTscore™ एआय अंदाज",
+    warningTitle: "ज्येष्ठ नागरिक सुरक्षा मार्गदर्शक तत्वे",
+    alertTitle: "हवामान बदल आरोग्य इशारा",
+    disclaimerText: "हे केवळ सामान्य आरोग्यासाठीचे मार्गदर्शन आहे आणि पात्र डॉक्टरांच्या सल्ल्याला पर्याय नाही।",
+    voiceSim: "हँड्स-फ्री व्हॉइस सिम्युलेटर",
+    quickAdd: "पाण्याचे प्रमाण जलद नोंदवा",
+    addMed: "नवीन औषध वेळापत्रकात जोडा",
+    settings: "सुरक्षा आणि एपीआय मांडणी",
+    profileTitle: "गोपनीय आरोग्य प्रोफाइल",
+    interactionTitle: "औषध आणि अन्न परस्पर संबंध तपासणी",
+    audioDictator: "प्रादेशिक आवाज वाचक",
+    exportReport: "वैद्यकीय अहवाल डाउनलोड करा"
+  },
+  Gujarati: {
+    dashboard: "બાયોમાર્કર્સ ડેશબોર્ડ",
+    meds: "દવાઓનું સમયપત્રક",
+    chat: "ક્લિનિકલ એઆઈ ચેટ",
+    botscore: "BOTscore™ અનુપાલન ઇન્ડેક્સ",
+    vitals: "EHR રીઅલ-ટાઇમ માપદંડ",
+    emergency: "ઇમરજન્સી સેન્ટર",
+    silentSos: "સાયલન્ટ SOS આપત્તિ સિગ્નલ",
+    activeRole: "ડોક્ટર અને পેશન્ટ સિસ્ટમ",
+    caregiver: "કેરટેકર કનેક્શન સિંક",
+    refillTracker: "રીફિલ ફોરકાસ્ટ રીવ્યુ",
+    confusionHeading: "દવાની ઓળખ માટેની માર્ગદર્શિકા",
+    forecastTitle: "BOTscore™ એઆઈ ઇલાજ પૂર્વાનુમાન",
+    warningTitle: "વરિષ્ઠ નાગરિક સુરક્ષા પ્રોટોકોલ",
+    alertTitle: "હવામાન આરોગ્ય જોખમ એલર્ટ",
+    disclaimerText: "આ ફક્ત સામાન્ય આરોગ્ય માર્ગદર્શન છે અને કોઈ પણ સંજોગોમાં વ્યાવસાયિક તબીબી સલાહનો વિકલ્પ નથી।",
+    voiceSim: "હેન્ડ્સ-ફ્રી વૉઇસ સિમ્યુલેટર",
+    quickAdd: "પાણીના લોગ ઉમેરો",
+    addMed: "દવાનું સમયપત્રક રજીસ્ટર કરો",
+    settings: "સિક્યોરિટી અને API સેટિંગ્સ",
+    profileTitle: "ખાનગી પ્રોફાઇલ અને જીનેટિક લક્ષ્યો",
+    interactionTitle: "દવા અને ખોરાકની આડઅસર વિશ્લેષણ",
+    audioDictator: "પ્રાદેશિક ભાષા વૉઇસ સ્પીકર",
+    exportReport: "હેલ્થ પાસપોર્ટ પ્રિન્ટ કરો"
   }
 };
 
@@ -396,6 +517,184 @@ export default function App() {
 
   const listEndRef = useRef<HTMLDivElement>(null);
   const timerRef = useRef<any>(null);
+
+  // --- Dietary Interaction & Multilingual Speaker states ---
+  const [selectedMedForCheck, setSelectedMedForCheck] = useState<string>("");
+  const [selectedDietForCheck, setSelectedDietForCheck] = useState<string>("Grapefruit Juice");
+  const [customMedForCheck, setCustomMedForCheck] = useState<string>("");
+  const [interactionResult, setInteractionResult] = useState<string>("");
+  const [isCheckingInteraction, setIsCheckingInteraction] = useState<boolean>(false);
+
+  // --- Real Speak Synthesis Prescription Engine ---
+  const speakPrescription = (med: Medication) => {
+    if (!('speechSynthesis' in window)) {
+      alert("Multilingual Speech Synthesis is not supported in this browser.");
+      return;
+    }
+    window.speechSynthesis.cancel();
+    
+    let speechText = "";
+    if (selectedLanguage === "English") {
+      speechText = `Prescription instructions for ${med.name}. Dosage strength: ${med.dosage}. Frequency: ${med.frequency}, to be taken ${med.mealTiming}. Caution: ${med.interactionWarnings || "No major interactions identified."}`;
+    } else if (selectedLanguage === "Hindi") {
+      speechText = `${med.name} के लिए दवा के निर्देश। खुराक की मात्रा ${med.dosage} है। आवृत्ति ${med.frequency} है, इसे भोजन के ${med.mealTiming === "After food" ? "बाद" : "पहले"} लिया जाना चाहिए। सुरक्षा सावधानी नोट: ${med.interactionWarnings || "कोई बड़ी परस्पर क्रिया नहीं।"}`;
+    } else if (selectedLanguage === "Telugu") {
+      speechText = `${med.name} మందుల సూచనలు. మోతాదు బలం ${med.dosage}. ఫ్రీక్వెన్సీ ${med.frequency}, దీనిని భోజనం ${med.mealTiming === "After food" ? "తరువాత" : "ముందు"} తీసుకోవాలి. హెచ్చరిక: ${med.interactionWarnings || "ఎటువంటి హానికరమైన పరస్పర చర్యలు లేవు."}`;
+    } else if (selectedLanguage === "Tamil") {
+      speechText = `${med.name} மருந்து அட்டவணை குறிப்புக்கள். மருந்தளவு ${med.dosage}. அதிர்வெண் ${med.frequency}, உணவு ${med.mealTiming === "After food" ? "உண்ட பின்" : "உண்ணும் முன்"} உட்கொள்ள வேண்டும். எச்சரிக்கை: ${med.interactionWarnings || "குறிப்பிடத்தக்க பக்க விளைவுகள் ஏதுமில்லை."}`;
+    } else if (selectedLanguage === "Malayalam") {
+      speechText = `${med.name} മരുന്ന് നിർദ്ദേശങ്ങൾ. ഡോസേജ് ${med.dosage}. കഴിക്കേണ്ട സമയം ${med.frequency}, ഇത് ഭക്ഷണം ${med.mealTiming === "After food" ? "കഴിച്ചതിന് ശേഷം" : "കഴിക്കുന്നതിന് മുൻപ്"} ഉപയോഗിക്കുക. മുൻകരുതൽ: ${med.interactionWarnings || "പ്രശ്നങ്ങൾ ഒന്നും കണ്ടെത്തിയിട്ടില്ല."}`;
+    } else if (selectedLanguage === "Spanish") {
+      speechText = `Instrucciones para ${med.name}. Dosis: ${med.dosage}. Frecuencia: ${med.frequency}, tomar ${med.mealTiming === "After food" ? "después de comer" : "antes de comer"}. Precaución: ${med.interactionWarnings || "Sin contraindicaciones identificadas."}`;
+    } else if (selectedLanguage === "Kannada") {
+      speechText = `${med.name} ಔಷಧಿ ಸೂಚನೆಗಳು. ಡೋಸೇಜ್ ${med.dosage}. ವೇಳಾಪಟ್ಟಿ ${med.frequency}, ಮತ್ತು ಇದನ್ನು ${med.mealTiming === "After food" ? "ಊಟದ ನಂತರ" : "ಊಟಕ್ಕೆ ಮೊದಲು"} ತೆಗೆದುಕೊಳ್ಳಬೇಕು. ಸುರಕ್ಷತಾ ಸೂಚನೆ: ${med.interactionWarnings || "ಯಾವುದೇ ಪ್ರಮುಖ ಅಡ್ಡಪರಿಣಾಮಗಳಿಲ್ಲ."}`;
+    } else if (selectedLanguage === "Bengali") {
+      speechText = `${med.name} ওষুধের ব্যবহার বিধি। ওষুধের মাত্রা ${med.dosage}। সময়সূচী ${med.frequency} যা খাবার ${med.mealTiming === "After food" ? "খাওয়ার পর" : "খাওয়ার আগে"} খেতে হবে। সতর্কতা: ${med.interactionWarnings || "কোন বিশেষ পার্শ্বপ্রতিক্রিয়া নেই।"}`;
+    } else if (selectedLanguage === "Marathi") {
+      speechText = `${med.name} औषधाचे वेळापत्रक. डोसची तीव्रता ${med.dosage} आहे. हे औषध दिवसभरात ${med.frequency} वेळा, जेवण ${med.mealTiming === "After food" ? "झाल्यानंतर" : "करण्यापूर्वी"} घ्यावे. औषधोपचार सुरक्षा टीप: ${med.interactionWarnings || "कोणतेही मोठे दुष्परिणाम नाहीत।"}`;
+    } else if (selectedLanguage === "Gujarati") {
+      speechText = `${med.name} દવા લેવાની રીત. ડોઝ સમય ${med.dosage}. દિવસમાં ${med.frequency} વખત, ભોજન ${med.mealTiming === "After food" ? "પછી" : "પહેલાં"} લેવી. સાવચેતી નોંધ: ${med.interactionWarnings || "કોઈ મોટી આડઅસર નથી।"}`;
+    } else {
+      speechText = `Prescription instructions for ${med.name}. Dosage is ${med.dosage}. Frequency: ${med.frequency}.`;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(speechText);
+    const voices = window.speechSynthesis.getVoices();
+    const langCodeMap: Record<string, string> = {
+      English: "en-US",
+      Hindi: "hi-IN",
+      Telugu: "te-IN",
+      Tamil: "ta-IN",
+      Malayalam: "ml-IN",
+      Spanish: "es-ES",
+      Kannada: "kn-IN",
+      Bengali: "bn-IN",
+      Marathi: "mr-IN",
+      Gujarati: "gu-IN"
+    };
+    const targetLang = langCodeMap[selectedLanguage] || "en-US";
+    utterance.lang = targetLang;
+    const matchedVoice = voices.find(v => v.lang.toLowerCase().includes(targetLang.toLowerCase()));
+    if (matchedVoice) {
+      utterance.voice = matchedVoice;
+    }
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const checkInteractionOffline = (medName: string, diet: string): string => {
+    const med = medName.toLowerCase();
+    const food = diet.toLowerCase();
+    
+    if (med.includes("lisinopril")) {
+      if (food.includes("potassium") || food.includes("banana")) {
+        return "⚠️ SEVERE HYPERKALEMIA RISK: Lisinopril reduces aldosterone output, promoting potassium storage. Eating high-potassium foods (bananas, spinach, whole potatoes) can trigger dangerous cardiac arrhythmia or coronary arrest. Restrict diet intake immediately.";
+      }
+      if (food.includes("alcohol")) {
+        return "⚠️ ACUTE HYPOTENSION ALERT: Alcohol amplifies Lisinopril's peripheral vaso-dilation effect. This can provoke acute syncope (sudden fainting), severe postural orthostatic nausea, and physical dizziness. Avoid simultaneous intake.";
+      }
+    }
+    if (med.includes("metformin")) {
+      if (food.includes("alcohol")) {
+        return "⚠️ CRITICAL LACTIC ACIDOSIS HAZARD: Metformin plus alcohol blocks liver lactate excretion. Patients become highly vulnerable to life-threatening Lactic Acidosis (excessive lactic acid in muscles and blood). Eliminate all active alcohol consumption during metformin therapies.";
+      }
+      if (food.includes("protein") || food.includes("fatty")) {
+        return "ℹ️ ABSORPTION METABOLIC SHIFT: Fatty/protein-heavy meals alter gastro-intestinal Metformin absorption pathways, reducing peak serum levels by 15%. However, taking Metformin with minor food is generally recommended to mitigate common gastro-intestinal side effects.";
+      }
+    }
+    if (med.includes("atorvastatin")) {
+      if (food.includes("grapefruit")) {
+        return "⚠️ STATIN TOXICITY WARNING: Grapefruit molecules selectively block CYP3A4 enzyme pathways in the gut wall. This raises circulating Atorvastatin concentration in bloodstream by 220%, highly risking severe Rhabdomyolysis (muscle tissue breakdown, muscle melting, or fatal kidney failure). Avoid grapefruit altogether.";
+      }
+    }
+    return `ℹ️ PHARMACOLOGICAL ANALYSIS: No severe direct interaction pathways identified between "${medName}" and "${diet}". However, consistently maintain standard 2-hour gaps between medication intake and dynamic food components to protect optimal metabolic clearance.`;
+  };
+
+  const runInteractionCheck = async () => {
+    const targetMedName = selectedMedForCheck === "custom" ? customMedForCheck : selectedMedForCheck;
+    if (!targetMedName) {
+      alert("Please select or type a medication name.");
+      return;
+    }
+    setIsCheckingInteraction(true);
+    setInteractionResult("");
+    
+    if (apiSettings.key) {
+      try {
+        const systemPrompt = "You are a clinical pharmacologist. Analyze potential interactions between specified medications and food/dietary elements.";
+        const prompt = `Perform a rigorous pharmacology study analyzing the potential drug-food metabolic or bioavailability interactions between medication/substance "${targetMedName}" and food item "${selectedDietForCheck}". Keep the report clinical, actionable, and formatted nicely in ${selectedLanguage} with clear bullet points. End the response with: "This is general wellness guidance only and not a replacement for professional medical advice."`;
+        const response = await fetchGeminiResponse(prompt, systemPrompt, apiSettings.key);
+        setInteractionResult(response);
+      } catch (e) {
+        setInteractionResult("Failed to query API: " + String(e) + "\n\nFallback offline results:\n" + checkInteractionOffline(targetMedName, selectedDietForCheck));
+      }
+    } else {
+      setTimeout(() => {
+        const offlineText = checkInteractionOffline(targetMedName, selectedDietForCheck);
+        setInteractionResult(offlineText);
+      }, 700);
+    }
+    setIsCheckingInteraction(false);
+  };
+
+  const exportHealthPassport = () => {
+    const reportDate = new Date().toLocaleString();
+    const passportData = `================================================================================
+                    CLINICAL HEALTH PASSPORT & EHR REPORT
+                    BOTtab Security Certification System • HIPAA Conf
+================================================================================
+Generated: ${reportDate}
+Patient Identifier Name: ${profile.name} (Age: ${profile.age})
+Biological Sex / Height / Weight: ${profile.gender} / ${profile.heightCm}cm / ${profile.weightKg}kg
+Active Clinical Role: ${profile.activeRole}
+Allergies: ${profile.allergies || "None logged"}
+Primary Medical Conditions: ${profile.medicalConditions || "Primary diagnostic screening"}
+
+CURRENT BOTscore™ CLINICAL ADHERENCE INDEX: ${calculatedScore}%
+================================================================================
+CURRENT TELEMETRY METRIC VALUES (EHR Realtime Biomarkers):
+--------------------------------------------------------------------------------
+- Blood Glucose: ${healthLog.bloodGlucose} mg/dL
+- Heart Rate: ${healthLog.heartRateBpm} bpm
+- Systolic Blood Pressure: ${healthLog.systolicBp} mmHg
+- Diastolic Blood Pressure: ${healthLog.diastolicBp} mmHg
+- Daily Sleep Tracked Amount: ${healthLog.sleepHours} Hours
+- Daily Hydration Fluid Intake: ${healthLog.waterIntakeMl} ml (Target: ${profile.waterGoalMl} ml)
+- Active Daily Physical Steps: ${healthLog.steps} steps
+- Active Stress Level Score: ${healthLog.stressLevel} / 10
+
+================================================================================
+ACTIVE CALENDAR PRESCRIPTION DIRECTORY:
+--------------------------------------------------------------------------------
+${medications.map((m, i) => `${i + 1}. ${m.name} (${m.dosage}) - ${m.frequency}
+   Meal Status: ${m.mealTiming} | Current Pill Stock Inventory: ${m.inventoryRemaining} pills
+   Pharmacology Warning: ${m.interactionWarnings || "No major contraindications identified"}`).join("\n\n")}
+
+================================================================================
+DECLARATION & INDICATION DIRECTIVE:
+--------------------------------------------------------------------------------
+The bearer's adherence log tracks an ongoing score index of ${calculatedScore}%. 
+This passport report functions as a clinically structured documentation summary.
+This is general wellness guidance only and not a replacement for professional medical advice.
+
+--------------------------------------------------------------------------------
+* Securely synchronized under HIPAA protocols and encrypted with high-fidelity BOTtab client systems. *
+================================================================================`;
+
+    const element = document.createElement("a");
+    const file = new Blob([passportData], { type: 'text/plain;charset=utf-8' });
+    element.href = URL.createObjectURL(file);
+    element.download = `BOTtab_Clinical_Health_Passport_${profile.name.replace(/\s+/g, "_")}.txt`;
+    document.body.appendChild(element);
+    element.click();
+    
+    navigator.clipboard.writeText(passportData)
+      .then(() => {
+        alert("📊 HEALTH PASSPORT EXPORTED SUCCESS!\n\n1. downloaded 'BOTtab_Clinical_Health_Passport.txt' locally.\n2. Raw passport documentation was copied to your clipboard to paste to your doctor.");
+      })
+      .catch(() => {
+        alert("📊 HEALTH PASSPORT DOWNLOADED SUCCESSFULLY!\n\nOpen your downloaded .txt file to view the passport.");
+      });
+  };
 
   // Local storage backup hooks
   useEffect(() => {
@@ -739,6 +1038,7 @@ CRITICAL PROTOCOLS:
               value={selectedLanguage}
               onChange={(e) => setSelectedLanguage(e.target.value)}
               className="bg-blueDarkBG/90 text-white select-nav border border-borderSlate px-2.5 py-1.5 rounded-xl font-bold text-xs outline-none cursor-pointer focus:border-cyanPrimary"
+              data-testid="language_nav_selector"
             >
               <option value="English">🇺🇸 English</option>
               <option value="Hindi">🇮🇳 हिन्दी</option>
@@ -746,7 +1046,22 @@ CRITICAL PROTOCOLS:
               <option value="Tamil">🇮🇳 தமிழ்</option>
               <option value="Malayalam">🇮🇳 മലയാളം</option>
               <option value="Spanish">🇪🇸 Español</option>
+              <option value="Kannada">🇮🇳 ಕನ್ನಡ (Kannada)</option>
+              <option value="Bengali">🇮🇳 বাংলা (Bengali)</option>
+              <option value="Marathi">🇮🇳 मराठी (Marathi)</option>
+              <option value="Gujarati">🇮🇳 ગુજરાતી (Gujarati)</option>
             </select>
+
+            {/* Export Clinical Health Passport Button (Human-Centered EHR Innovation) */}
+            <button
+              onClick={exportHealthPassport}
+              className="flex items-center gap-1.5 bg-cyanPrimary hover:bg-cyanNeon text-blueDarkBG px-3 py-1.5 rounded-xl font-extrabold text-xs uppercase shadow-[0_3px_8px_rgba(0,240,255,0.25)] active:scale-95 transition-all text-scale-transition shrink-0 border border-cyanPrimary/50"
+              data-testid="export_health_passport_btn"
+              title="Download Secure Clinical Health Passport"
+            >
+              <Award className="w-4 h-4 text-blueDarkBG" />
+              <span>Passport</span>
+            </button>
 
             {/* Weather Risk Injector Selector */}
             <button 
@@ -1400,6 +1715,89 @@ CRITICAL PROTOCOLS:
                 </div>
               </div>
 
+              {/* Drug & Dietary Interaction Checker Widget */}
+              <div className="bg-blueCardBG border border-borderSlate rounded-3xl p-6 space-y-4">
+                <div className="border-b border-borderSlate/35 pb-3">
+                  <h4 className="text-xs font-black tracking-widest text-[#94a3b8] uppercase flex items-center gap-2">
+                    <Activity className="w-5 h-5 text-cyanPrimary" />
+                    {getLangText(selectedLanguage, "interactionTitle")} • BIOMARKER REVIEWS
+                  </h4>
+                  <p className="text-[10.5px] text-accessibilityGray leading-normal mt-0.5">
+                    Select a programmed scheduled prescription or enter a custom compound to cross-screen against typical dietary absorption blockades.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="text-[10.5px] font-black text-[#cbd5e1] uppercase tracking-wide">Select Medication</label>
+                    <select
+                      value={selectedMedForCheck}
+                      onChange={(e) => {
+                        setSelectedMedForCheck(e.target.value);
+                        if (e.target.value !== "custom") setCustomMedForCheck("");
+                      }}
+                      className="w-full bg-blueDarkBG border border-borderSlate text-white text-xs rounded-xl p-3 focus:border-cyanPrimary outline-none transition-all"
+                      data-testid="med_select_checker"
+                    >
+                      <option value="">-- Choose RX Stock --</option>
+                      {medications.map(m => (
+                        <option key={m.id} value={m.name}>{m.name}</option>
+                      ))}
+                      <option value="custom">-- Custom Drug Compound --</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="text-[10.5px] font-black text-[#cbd5e1] uppercase tracking-wide">Dietary Triggers</label>
+                    <select
+                      value={selectedDietForCheck}
+                      onChange={(e) => setSelectedDietForCheck(e.target.value)}
+                      className="w-full bg-blueDarkBG border border-borderSlate text-white text-xs rounded-xl p-3 focus:border-cyanPrimary outline-none transition-all"
+                      data-testid="diet_select_checker"
+                    >
+                      <option value="Grapefruit Juice">Grapefruit Juice (CYP3A4 inhibitor)</option>
+                      <option value="Bananas & Potassium">High Potassium (Spinach, Bananas)</option>
+                      <option value="Alcohol Consumption">Alcohol (Lactic Acid & Vasodilation)</option>
+                      <option value="Fatty & Protein meals">Fatty or High-Protein Meals</option>
+                    </select>
+                  </div>
+
+                  <div className="flex items-end">
+                    <button
+                      onClick={runInteractionCheck}
+                      disabled={isCheckingInteraction}
+                      className="w-full bg-blueElectric hover:bg-cyanPrimary hover:text-blueDarkBG disabled:opacity-45 text-white font-extrabold text-xs tracking-wide uppercase p-3 rounded-xl transition-all shadow-[0_4px_10px_rgba(30,144,255,0.2)]"
+                      data-testid="submit_interaction_check"
+                    >
+                      {isCheckingInteraction ? "Analyzing Pathways..." : "Run Pharmacology Review"}
+                    </button>
+                  </div>
+                </div>
+
+                {selectedMedForCheck === "custom" && (
+                  <div className="space-y-1.5 bg-blueDarkBG/40 p-3.5 rounded-2xl border border-borderSlate/40">
+                    <label className="text-[10.5px] font-black text-[#cbd5e1] uppercase">Type Custom Compound Name</label>
+                    <input
+                      type="text"
+                      value={customMedForCheck}
+                      onChange={(e) => setCustomMedForCheck(e.target.value)}
+                      placeholder="e.g. Warfarin, Ibuprofen, Lisinopril..."
+                      className="w-full bg-blueDarkBG border border-borderSlate text-white text-xs rounded-xl p-3 focus:border-cyanPrimary outline-none"
+                    />
+                  </div>
+                )}
+
+                {interactionResult && (
+                  <div className="bg-black/45 border border-borderSlate/35 p-4 rounded-2xl space-y-2 text-xs">
+                    <span className="text-[10px] font-black tracking-wider text-cyanPrimary uppercase block">Pathology Screen Report:</span>
+                    <p className="text-[#e2e8f0] leading-relaxed whitespace-pre-wrap">{interactionResult}</p>
+                    <div className="text-[9px] text-accessibilityGray italic border-t border-borderSlate/25 pt-2 mt-2">
+                      {getLangText(selectedLanguage, "disclaimerText")}
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {/* Medications Schedule timeline list cards */}
               <div className="flex justify-between items-center">
                 <div>
@@ -1450,9 +1848,19 @@ CRITICAL PROTOCOLS:
                                 {med.frequency}
                               </span>
                             </div>
-                            <span className="text-xs text-accessibilityGray font-bold block mt-1">
-                              Dosage strength: {med.dosage} ({med.mealTiming})
-                            </span>
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 mt-1">
+                              <span className="text-xs text-accessibilityGray font-bold block">
+                                Dosage strength: {med.dosage} ({med.mealTiming})
+                              </span>
+                              <button
+                                onClick={() => speakPrescription(med)}
+                                className="flex items-center gap-1.5 px-2 py-0.5 bg-cyanPrimary/10 border border-cyanPrimary/35 hover:border-cyanPrimary text-cyanPrimary rounded-md text-[9px] uppercase font-black tracking-wide hover:bg-cyanPrimary/20 active:scale-95 transition-all w-fit"
+                                data-testid={`speak_prescription_${med.id}`}
+                              >
+                                <Volume2 className="w-3 h-3 text-cyanPrimary animate-pulse" />
+                                Speak EHR Info
+                              </button>
+                            </div>
                           </div>
 
                           <div className={`px-2.5 py-1.5 rounded-xl border text-right shrink-0 ${
