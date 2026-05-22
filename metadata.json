@@ -1,0 +1,8 @@
+{
+  "name": "BOTtab",
+  "description": "Futuristic preventive healthcare AI assistant and smart medication manager.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

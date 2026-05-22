@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Outer Cyan Ring representing AI loop -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M 54 20 A 34 34 0 1 1 53.99 20 Z" />
+
+    <!-- Stylized Modern Medical Cross in the center -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M 49 40 L 59 40 L 59 49 L 68 49 L 68 59 L 59 59 L 59 68 L 49 68 L 49 59 L 40 59 L 40 49 L 49 49 Z" />
+
+    <!-- Stylized Pill intersecting diagonally representing BOTtab -->
+    <path
+        android:fillColor="#A9F7FD"
+        android:pathData="M 36 36 C 33 39 33 44 36 47 L 47 36 C 44 33 39 33 36 36 Z" />
+    <path
+        android:fillColor="#2979FF"
+        android:pathData="M 61 61 C 64 58 64 53 61 50 L 50 61 C 53 64 58 64 61 61 Z" />
+</vector>
